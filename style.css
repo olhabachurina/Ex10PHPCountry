@@ -1,0 +1,101 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('fon.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Основной контейнер */
+.container {
+    width: 400px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.85);  /* Полупрозрачный белый фон */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    text-align: center;
+    backdrop-filter: blur(5px); /* Применяет размытие */
+}
+
+/* Заголовок */
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Стили для выпадающего списка */
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    appearance: none;
+    background-color: #f9fafb;
+    color: #333;
+}
+
+select:hover {
+    border-color: #60a5fa;
+}
+
+select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none; /* Изначально скрыта */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+table.show {
+    display: table;
+    opacity: 1;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    color: #333;
+}
+
+th {
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #f9fafb;
+}
+
+/* Плавный переход для элементов */
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
